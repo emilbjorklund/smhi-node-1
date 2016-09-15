@@ -72,76 +72,105 @@ Forecast.prototype.getValidTime = function() {
 };
 
 Forecast.prototype.getMeanSeaLevel = function() {
-	return this.parameters[0].valueWrapper();
+	var forecastProp = this.parameters[0];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getTemperature = function() {	 
-  return this.parameters[1].valueWrapper();
+  var forecastProp = this.parameters[1];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getVisibility = function() {
-  return this.parameters[2].valueWrapper();
+  var forecastProp = this.parameters[2];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getWindDirection = function() {
-  return this.parameters[3].valueWrapper();
+  var forecastProp = this.parameters[3];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getWindVelocity = function() {
-  return this.parameters[4].valueWrapper();
+  var forecastProp = this.parameters[4];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getRelativeHumidity = function() {
-  return this.parameters[5].valueWrapper();
+  var forecastProp = this.parameters[5];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getThunderstormProbability = function() {
-  return this.parameters[6].valueWrapper();
+  var forecastProp = this.parameters[6];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getTotalCloudCover = function() {
-  return this.parameters[7].valueWrapper();
+  var forecastProp = this.parameters[7];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getLowCloudCover = function() {
-  return this.parameters[8].valueWrapper();
+  var forecastProp = this.parameters[8];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getMediumCloudCover = function() {
-  return this.parameters[9].valueWrapper();
+  var forecastProp = this.parameters[9];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getHighCloudCover = function() {
-  return this.parameters[10].valueWrapper();
+  var forecastProp = this.parameters[10];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getGust = function() {
-  return this.parameters[11].valueWrapper();
+  var forecastProp = this.parameters[11];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getMinimumPrecipitationIntensity = function() {
-  return this.parameters[12].valueWrapper();
+  var forecastProp = this.parameters[12];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getMaximumPrecipitationIntensity = function() {
-  return this.parameters[13].valueWrapper();
+  var forecastProp = this.parameters[13];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getPercentPrecipitationFrozenForm = function() {
-  return this.parameters[14].valueWrapper();
+  var forecastProp = this.parameters[14];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getPrecipitationCategory = function() {
-  return this.parameters[15].valueWrapper();
+  var forecastProp = this.parameters[15];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 Forecast.prototype.getWeatherSymbol = function() {
-  return this.parameters[18].valueWrapper();
-};
-
-Object.prototype.valueWrapper = function() {	 
-  this.value = this.values[0] == undefined ? undefined : this.values[0];
-  return this;
+  var forecastProp = this.parameters[18];
+  forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
+  return forecastProp;
 };
 
 module.exports = Response;
