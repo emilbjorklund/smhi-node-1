@@ -169,6 +169,9 @@ Forecast.prototype.getPrecipitationCategory = function() {
 
 Forecast.prototype.getWeatherSymbol = function() {
   var forecastProp = this.parameters[18];
+  if (!forecastProp) {
+    forecastProp = {};
+  }
   forecastProp.value = forecastProp.values && forecastProp.values[0] ? forecastProp.values[0] : undefined;
   return forecastProp;
 };
